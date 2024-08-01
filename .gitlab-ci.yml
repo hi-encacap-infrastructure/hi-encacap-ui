@@ -13,5 +13,3 @@ build-storybook:
   artifacts:
     paths:
       - storybook-static
-  only:
-    - master
