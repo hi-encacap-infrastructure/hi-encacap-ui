@@ -12,4 +12,4 @@ build-storybook:
     - bun run build:storybook
   artifacts:
     paths:
-      - storybook-static
+      - storybook
