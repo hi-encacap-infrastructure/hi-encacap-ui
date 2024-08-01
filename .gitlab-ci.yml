@@ -1,0 +1,17 @@
+default:
+  cache:
+    key: "$CI_COMMIT_REF_SLUG"
+    paths:
+      - node_modules/
+  before_script:
+    - bun install
+
+build-storybook:
+  stage: build
+  script:
+    - bun run build:storybook
+  artifacts:
+    paths:
+      - storybook-static
+  only:
+    - master
