@@ -22,12 +22,10 @@ build-package:
     paths:
       - dist
 
-release-storybook:
+publish-package:
   stage: release
+  before_script:
+    - corepack enable
+    - yarn set version stable
   script:
-    - bun run release:storybook
-  artifacts:
-    paths:
-      - storybook
-  only:
-    - master
+    - yarn npm publish
