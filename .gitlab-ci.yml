@@ -13,3 +13,21 @@ build-storybook:
   artifacts:
     paths:
       - storybook
+
+build-package:
+  stage: build
+  script:
+    - bun run build:package
+  artifacts:
+    paths:
+      - dist
+
+release-storybook:
+  stage: release
+  script:
+    - bun run release:storybook
+  artifacts:
+    paths:
+      - storybook
+  only:
+    - master
