@@ -23,9 +23,9 @@ build-package:
       - dist
 
 publish-package:
-  stage: release
+  stage: deploy
   before_script:
     - corepack enable
     - yarn set version stable
   script:
-    - yarn npm publish
+    - yarn npm publish --set-version 1.0.0-develop.1
