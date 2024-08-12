@@ -28,4 +28,4 @@ publish-package:
     - corepack enable
     - yarn set version stable
   script:
-    - yarn npm publish --set-version 1.0.0-develop.1
+    - yarn npm publish --new-version 1.0.0-develop.1
