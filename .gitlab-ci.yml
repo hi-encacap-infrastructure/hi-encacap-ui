@@ -6,13 +6,13 @@ default:
   before_script:
     - bun install
 
-build-storybook:
-  stage: build
-  script:
-    - bun run build:storybook
-  artifacts:
-    paths:
-      - storybook
+# build-storybook:
+#   stage: build
+#   script:
+#     - bun run build:storybook
+#   artifacts:
+#     paths:
+#       - storybook
 
 build-package:
   stage: build
